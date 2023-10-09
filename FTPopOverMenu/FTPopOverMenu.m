@@ -15,8 +15,7 @@
 #define FTDefaultMenuCornerRadius           5.f
 #define FTDefaultAnimationDuration          0.2
 // change them at your own risk
-#define KSCREEN_WIDTH                       [[UIScreen mainScreen] bounds].size.width
-#define KSCREEN_HEIGHT                      [[UIScreen mainScreen] bounds].size.height
+#define KSCREEN_WIDTH                       ((UIDevice.currentDevice.userInterfaceIdiom == UIUserInterfaceIdiomPad) ? [UIApplication sharedApplication].delegate.window.bounds.size.width : [UIScreen mainScreen].bounds.size.width)#define KSCREEN_HEIGHT                      [[UIScreen mainScreen] bounds].size.height
 #define FTDefaultBackgroundColor            [UIColor clearColor]
 #define FTDefaultTintColor                  [UIColor colorWithRed:80/255.f green:80/255.f blue:80/255.f alpha:1.f]
 #define FTDefaultTextColor                  [UIColor whiteColor]
